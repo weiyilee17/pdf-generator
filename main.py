@@ -33,7 +33,8 @@ for index, row in topics_data_frame.iterrows():
         In A4 format, full width is 210, full height is 298
         
         """
-    pythonNotesPDF.line(x1=10, y1=21, x2=200, y2=21)
+    for y_position in range(20, 298, 10):
+        pythonNotesPDF.line(x1=10, y1=y_position, x2=200, y2=y_position)
 
     # Set the footer
     pythonNotesPDF.ln(265)
@@ -45,6 +46,9 @@ for index, row in topics_data_frame.iterrows():
 
     for i in range(blank_pages):
         pythonNotesPDF.add_page()
+
+        for y_position in range(20, 298, 10):
+            pythonNotesPDF.line(x1=10, y1=y_position, x2=200, y2=y_position)
 
         # Set the footer
         pythonNotesPDF.ln(277)
