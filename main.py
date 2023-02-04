@@ -58,7 +58,3 @@ for index, row in topics_data_frame.iterrows():
 
 
 pythonNotesPDF.output('notes.pdf')
-
-
-
-
